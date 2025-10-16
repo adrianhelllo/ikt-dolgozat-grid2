@@ -3,6 +3,7 @@
     --PRIMARY: white;
     --SECONDARY: #eee;
     --PAGE-BG: rgb(255, 255, 183);
+    --BORDER-CLR: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -12,16 +13,19 @@
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    padding: 0.4rem;
 }
 
 body {
     background-color: var(--PAGE-BG);
+    padding-bottom: 2rem;
 }
 
 main {
     display: grid;
-    grid-template-rows: 50px 100px 1fr 100px;
+    grid-template-rows: auto auto 1fr 100px;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas: "h h h"
                          "n n n"
                          "as ar ar"
@@ -29,21 +33,48 @@ main {
 
 
     background-color: var(--PRIMARY);
-    max-width: 80%;
+    max-width: 85%;
     margin: auto;
+    padding: 2rem;
 }
 
 header {
     grid-area: h;
+    color: var(--ACCENT);
+    font-size: 1.25rem;
 }
 
 nav {
     grid-area: n;
     margin: 1rem 0;
+    background-color: var(--ACCENT);
+    padding: 1.3rem 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 aside {
     grid-area: as;
+}
+
+aside img {
+    margin-bottom: 1rem;
 }
 
 article {
@@ -54,6 +85,16 @@ article {
     margin-inline: 1rem;
 }
 
+article div 
+
 footer {
     grid-area: f;
+    color: var(--ACCENT);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+img, article div {
+    border: 1px solid var(--BORDER-CLR);
+    border-radius: 0.25rem;
 }
