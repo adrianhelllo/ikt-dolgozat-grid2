@@ -1,0 +1,59 @@
+:root {
+    --ACCENT: darkgreen;
+    --PRIMARY: white;
+    --SECONDARY: #eee;
+    --PAGE-BG: rgb(255, 255, 183);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--PAGE-BG);
+}
+
+main {
+    display: grid;
+    grid-template-rows: 50px 100px 1fr 100px;
+    grid-template-areas: "h h h"
+                         "n n n"
+                         "as ar ar"
+                         "f f f";
+
+
+    background-color: var(--PRIMARY);
+    max-width: 80%;
+    margin: auto;
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+    margin: 1rem 0;
+}
+
+aside {
+    grid-area: as;
+}
+
+article {
+    grid-area: ar;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    margin-inline: 1rem;
+}
+
+footer {
+    grid-area: f;
+}
