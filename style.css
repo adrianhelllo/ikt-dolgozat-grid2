@@ -34,6 +34,7 @@ main {
 
     background-color: var(--PRIMARY);
     max-width: 85%;
+    gap: 2rem;
     margin: auto;
     padding: 2rem;
 }
@@ -82,7 +83,6 @@ article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-inline: 1rem;
 }
 
 article h2 {
@@ -110,12 +110,16 @@ footer {
     color: var(--ACCENT);
     font-size: 1.1rem;
     text-align: center;
-    margin-top: ;
+    margin-top: 2rem;
 }
 
 img, article div {
     border: 1px solid var(--BORDER-CLR);
     border-radius: 0.25rem;
+}
+
+ol li {
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 576px) {
